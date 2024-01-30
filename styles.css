@@ -1,0 +1,83 @@
+body, h1, h2, h3, p, ul, li, table {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background-color: aqua;
+    height: 100%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.alumno-section,
+.carrera-section,
+.libros-section,
+.hobbies-section,
+.sitios-web-section {
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #6e6e6e;
+    border-radius: 5px;
+}
+
+.imagen-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.alumno-foto {
+    width: 100%;
+    max-width: 200px;
+    transition: transform 0.5s;
+}
+
+.logo-equipo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 200px;
+    transform: rotateY(180deg);
+    transition: transform 0.5s;
+    opacity: 0;
+}
+
+#foto-alumno:hover {
+    transform: rotateY(180deg);
+}
+
+#foto-alumno:hover + #logo-equipo {
+    transform: rotateY(0);
+    opacity: 1;
+}
+
+.info-alumno {
+    padding: 20px;
+    text-align: left;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
